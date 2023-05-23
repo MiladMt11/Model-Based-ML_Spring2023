@@ -15,6 +15,7 @@ from pyro.infer import MCMC, NUTS, HMC, SVI, Trace_ELBO
 from pyro.optim import Adam, ClippedAdam
 from sklearn.model_selection import train_test_split
 
+#############################################################################################
 
 def model(X, n_cat, obs=None):
     input_dim = X.shape[1]
@@ -27,6 +28,8 @@ def model(X, n_cat, obs=None):
         y = pyro.sample("y", dist.Categorical(logits=alpha + X.matmul(beta)), obs=obs)
         
     return y
+
+#############################################################################################
 
 def model__prior_mu_studentT(X, n_cat, degF, tau, obs=None):
     
@@ -50,6 +53,7 @@ def model__prior_mu_studentT(X, n_cat, degF, tau, obs=None):
         
     return y
 
+#############################################################################################
 
 def model_prior_mu_normal(X, n_cat,lambda_, tau, obs=None):
     
@@ -73,6 +77,8 @@ def model_prior_mu_normal(X, n_cat,lambda_, tau, obs=None):
         
     return y
 
+#############################################################################################
+
 def model_ARD(X, n_cat, degF, tau, obs=None):
     
     input_dim = X.shape[1]
@@ -83,7 +89,7 @@ def model_ARD(X, n_cat, degF, tau, obs=None):
     
     with pyro.plate("ARD", input_dim):
 
-        sigma_beta  = pyro.sample("sigma_beta",  dist.HalfCauchy(tau*torch.ones(n_cat)).to_event()) # Prior for the bias standard deviation
+        sigma_beta  = pyro.sample("sigma_beta",  dist.HalfCauchy(tau*torch.ones(n_cat)).to_event()) # Prior for the bias standard                                                                                                                 deviation
         
     beta  = pyro.sample("beta", dist.Normal(mu_beta*torch.ones(n_cat), 
                                             sigma_beta).to_event()) # Priors for the regression coefficents
@@ -97,4 +103,4 @@ def model_ARD(X, n_cat, degF, tau, obs=None):
         
     return y
 
-    
+#############################################################################################
