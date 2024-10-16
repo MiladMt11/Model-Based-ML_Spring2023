@@ -55,8 +55,10 @@ You will need to have Python installed on your machine. You can download it [her
     ```
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
+## Disclaimer
+This project is the result of collaborative group work, with contributions from multiple team members, and may not fully represent the views or capabilities of any single individual.
+
 ## Contact
-I'm open to any feedback, suggestions, or questions regarding the projects or the repository. Don't hesitate to contact me via email at milad.mtkh@gmail.com.
+We are open to any feedback, suggestions, or questions regarding the projects or the repository. Don't hesitate to contact via email at milad.mtkh@gmail.com
