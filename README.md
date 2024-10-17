@@ -8,6 +8,8 @@ Inference methods such as Markov Chain Monte Carlo (MCMC) and Variational Infere
 
 A detailed report of the project: [Report](https://github.com/MiladMt11/Model-Based-ML_Spring2023/blob/bb940b3fe411d0de64bdcd3c5721096e7241e051/project%20report.pdf)
 
+* In this project, we leveraged the [Pyro package](https://pypi.org/project/pyro-ppl/), an advanced probabilistic programming framework built on PyTorch, to model complex, highly flexible probabilistic systems.
+
 ## Dataset
 The dataset used for this project is available [here](https://www.kaggle.com/code/jvedarutvija/music-genre-classification).
 
@@ -25,6 +27,12 @@ The notebook containing models with different choices of priors and inference me
 The rest of the notebooks are experiments with different combinations of choices of priors, models and inference methods.
 
 The preprocessed [pickle file](https://github.com/MiladMt11/Model-Based-ML_Spring2023/tree/bb940b3fe411d0de64bdcd3c5721096e7241e051/pickle) of the data is also provided for convenient data loading.
+
+## Frameworks & Packages
+* [Pytorch](https://pytorch.org/)
+* [Pyro](https://pypi.org/project/pyro-ppl/)
+* scikit-learn
+* Numpy
 
 ## Installation
 
